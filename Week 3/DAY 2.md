@@ -12,3 +12,14 @@
     1. Inferencing is best-guess, not a guarantee
     2. Annotations are optional
     3. Any part of the application that isn't typed introduces uncertainty
+* Type-Aware Linting in TS:
+  * annotating
+  * custom types & signatures
+  * validating operand types
+## Scope:
+Lesson summary:
+* Scope: where to look for things
+  * Nested Scope
+  * Hoisting
+  * Closure
+  * Modules
