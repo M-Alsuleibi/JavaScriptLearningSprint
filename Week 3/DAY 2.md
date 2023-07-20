@@ -29,5 +29,8 @@ Lesson summary:
 *  We have to think about JavaScript as a two-pass system rather than a single-pass.
   * What happens when we process our code, is compilation. We are gonna process the code first, and set up the scopes, and then we are gonna execute it
   * So if the identifiers are the marbles, what are the buckets? The buckets are our units of scope. And in JavaScript we primarily have functions, but we also now have blocks.
-* Compilation And Scope:
- * 
+* Compilation And Scope vs. Executing Code:
+ * There is a compilation time when been a conversation between 'the scope manager' and 'the compiler' . What happened is discriminate each identifier to specific scope accourding where the 'declaration/target ' positioning occured.
+ * And there is a runtime after when been a conversation between 'the scope manager' and 'the virtual machine or JS engine'. Here the 'source' been processed.
+>>> **So we discover the source versus target position at compile time, but we don't use that information until run time.**
+ 
