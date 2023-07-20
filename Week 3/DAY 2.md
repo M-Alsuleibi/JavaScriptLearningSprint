@@ -23,3 +23,11 @@ Lesson summary:
   * Hoisting
   * Closure
   * Modules
+* All variable are in one of two roles in program :
+ 1. receicving the assignment of some value , or
+ 2. retrieving a value from the variable
+*  We have to think about JavaScript as a two-pass system rather than a single-pass.
+  * What happens when we process our code, is compilation. We are gonna process the code first, and set up the scopes, and then we are gonna execute it
+  * So if the identifiers are the marbles, what are the buckets? The buckets are our units of scope. And in JavaScript we primarily have functions, but we also now have blocks.
+* Compilation And Scope:
+ * 
