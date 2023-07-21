@@ -47,3 +47,4 @@ In this challenge, you will enhance your JavaScript skills and knowledge. Each d
 ## Week 3:
 1. [DAY 1](https://github.com/M-Alsuleibi/Mastering-JavaScript-in-20-Days/blob/main/Week%203/DAY%201.md)
 2. [DAY 2](https://github.com/M-Alsuleibi/Mastering-JavaScript-in-20-Days/blob/main/Week%203/DAY%202.md)
+2. [DAY 3](https://github.com/M-Alsuleibi/Mastering-JavaScript-in-20-Days/blob/main/Week%203/DAY%203.md)
