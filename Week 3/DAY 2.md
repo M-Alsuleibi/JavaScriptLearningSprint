@@ -77,6 +77,12 @@ Lesson summary:
    * undefined means a variable exists but at the moment it has no value: It may have never had a value or it might have used to have a value and it doesn't anymore but there is no other value in the vacuum of space it is undefined.
    *  undeclared is actually never formally declared in any scope that we have accessed to.
 >  There's a different something being undeclared doesn't exist, and being undefine definitely it does exist, but doesn't have a value.
-## SCOPE & HOISTING QUESTIONS Coding Exersice:
-#### [QUESTION #1](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week3-day2-tasks/tasks.md)
+## SCOPE & HOISTING QUESTIONS [Coding Exersice](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week3-day2-tasks/tasks.md):
+#### QUESTION #1
+#### Answer : D) `1`, `ReferenceError`
+#### Explanation:
+In 1st pass stage the compiler will recognise the variable `a` which declared using `var` in `if` block in the function scope because of hoisting where the declaration is moved to the top of the function .
+where `b` and `c` are only accessible within the block in which they are declared because they been declared using `let` and `const` .
+So when the 2nd pass stage come (execution) and it reach the first `console.log(a)` **JS engine** will search on `a` on global scope and will not find it then will search on it inside `testScope1` function and will find it and execute the **source target** `a` and will display `1` on console. But when reach the second `console.log(b)` it will not find `b` rather in global scope nor function scope so it will fire a referance error and stop execution.
+
    
