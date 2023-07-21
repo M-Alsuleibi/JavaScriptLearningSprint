@@ -40,3 +40,7 @@ console.log(dillion)
 
 // Hi, my name is Mohammad
 ```
+* Named Function Expressions: Benefits
+  1. Reliable function self-reference (recursion, etc)
+  2. More debuggable stack traces
+  3. More self-documenting code 
