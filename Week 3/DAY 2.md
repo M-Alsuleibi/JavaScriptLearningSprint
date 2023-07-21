@@ -84,5 +84,14 @@ Lesson summary:
 In 1st pass stage the compiler will recognise the variable `a` which declared using `var` in `if` block in the function scope because of hoisting where the declaration is moved to the top of the function .
 where `b` and `c` are only accessible within the block in which they are declared because they been declared using `let` and `const` .
 So when the 2nd pass stage come (execution) and it reach the first `console.log(a)` **JS engine** will search on `a` on global scope and will not find it then will search on it inside `testScope1` function and will find it and execute the **source target** `a` and will display `1` on console. But when reach the second `console.log(b)` it will not find `b` rather in global scope nor function scope so it will fire a referance error and stop execution.
-
-   
+#### QUESTION #2
+#### Answer :A) `undefined`, `ReferenceError`   
+#### Explanation:
+In compilation stage `a` is hoisted and initialized with `undefined` because `var` a is hoisted to the top of the function scope.While `b` and `c` are [variables defined with let and const are hoisted to the top of the block, but not initialized.
+Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+Using a let variable before it is declared will result in a` ReferenceError`.
+The variables is in a "temporal dead zone" from the start of the block until it is declared](https://www.w3schools.com/js/js_hoisting.asp)
+#### QUESTION #3
+#### Answer :C) `[ 36, 100, 45 ]` | `[ 1, 2, 3 ]` | `[ 1,100, 45 ]`     
+#### Explanation:
+ Although `a `was re-declared within the if-block and its value was changed to `1`, the re-declaration using `var` is still within the same function scope, so it affects the variable a throughout the function. However, `b` and `c` are block-scoped, so their changes inside the if-block do not affect their values outside the block.
