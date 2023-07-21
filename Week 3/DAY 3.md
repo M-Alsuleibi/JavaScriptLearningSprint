@@ -53,4 +53,11 @@ console.log(dillion)
 * [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 * Block scope :Blocks are not scopes until they have a `let` or `const` inside of them and then that sort of implicitly makes them a scope.
 * When using `const` you can not reassign! BUT you can mutate like in arrays declared with `const` keyword.It prefered to use it with primitive immutable values like strings, numbers, and booleans. 
-# Coding Exercises
+# [Coding Exercises](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week3-day3-tasks/tasks.md)
+
+#### QUESTION 3 Solution:
+> Explanation: . When `inner1()` is called, it accesses the value of `x` from its outer lexical environment, which is `outer1`. Since `x` is defined within `outer1`, `inner1` can access and log the value of `x`, which is `10`.
+#### QUESTION 4 Solution:
+> Explanation :the `inner2` function creates a new variable named `x` inside its own scope using the `var` keyword. This local variable `x `takes precedence over the outer variable `x` declared in the `outer2` function. When `inner2()` is called, it looks for the variable `x` within its own scope first. Since `x` is declared inside `inner2` with a value of `20`, it logs `20` to the console.
+---
+**In JavaScript, when a variable is declared within a function, it creates a new variable local to that function, which can shadow (hide) variables with the same name in outer scopes. This concept is known as variable shadowing.**
