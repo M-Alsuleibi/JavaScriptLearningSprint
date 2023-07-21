@@ -73,4 +73,10 @@ Lesson summary:
    * First pass compilation : There is a compilation time when been a conversation between 'the scope manager' and 'the compiler' . What happened is discriminate each identifier to specific scope accourding where the 'declaration/target ' positioning occured.
    * Second pass execution: there is a runtime after when been a conversation between 'the scope manager' and 'the virtual machine or JS engine'. Here the 'source' been processed.
 > **So we discover the source versus target position at compile time, but we don't use that information until run time.**
- 
+ * undefined vs. undeclared :
+   * undefined means a variable exists but at the moment it has no value: It may have never had a value or it might have used to have a value and it doesn't anymore but there is no other value in the vacuum of space it is undefined.
+   *  undeclared is actually never formally declared in any scope that we have accessed to.
+>  There's a different something being undeclared doesn't exist, and being undefine definitely it does exist, but doesn't have a value.
+## SCOPE & HOISTING QUESTIONS Coding Exersice:
+#### [QUESTION #1](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week3-day2-tasks/tasks.md)
+   
