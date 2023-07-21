@@ -1,4 +1,4 @@
-# Scope, Function Expressions And Advanced Scope 
+# DAY 3: Scope, Function Expressions And Advanced Scope 
 # Lesson Summary:
 ## Function Declaration vs Function Expression:
 ### Function Declaration:
@@ -44,3 +44,13 @@ console.log(dillion)
   1. Reliable function self-reference (recursion, etc)
   2. More debuggable stack traces
   3. More self-documenting code 
+## Advanced Scope:
+* JS is 100% lexically scoped. Lexical scope is the ability for a function scope to access variables from the parent scope. We call the child function to be lexically bound by that of the parent function.
+* The principle of least exposure or the principle of least privilege: You should default to keeping everything private, and only exposing the minimal necessary. Three core reasons for this principle:
+  1.  We have naming collision problems. And if you hide something within a scope, or hide something on a namespace or do some other sort of hiding, then you reduce the surface area for name collisions.
+  2.  If you hide something, it means that somebody else can't accidentally of intentionally misuse that thing.
+  3.  You protect yourself for future refactoring. If you expose something, it's a guarantee almost, there's gotta be some CS law for this, it's a guarantee that somebody's gonna use it. And as soon as they start using it, now you are restricted in your ability to freely refactor it.
+* [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+* Block scope :Blocks are not scopes until they have a `let` or `const` inside of them and then that sort of implicitly makes them a scope.
+* When using `const` you can not reassign! BUT you can mutate like in arrays declared with `const` keyword.It prefered to use it with primitive immutable values like strings, numbers, and booleans. 
+# Coding Exercises
