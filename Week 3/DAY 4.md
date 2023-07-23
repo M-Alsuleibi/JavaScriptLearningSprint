@@ -32,3 +32,32 @@ QUESTION #3 Explanation :
 > The arrow functions inside the loop capture the variable `i` by reference, not by value. As a result, when the functions are executed later in the `forEach` loop, they all see the final value of `i`, which is 5,
 >>  I can use the `let` keyword instead of `var` to declare `i`. When  using `let`, a new binding for `i` is created for each iteration of the loop, ensuring that each function captures the correct value of `i` during that iteration. 
 ### Closure Questions
+QUESTION #1
+Create a function called privateCounter() that behaves like a private counter. The function should not have any public variables, and the count should only be accessible through a closure. It should have two methods: increment() and getCount(). The increment() method should increment the count, and getCount() should return the current count.
+
+```javascript
+function privateCounter() {
+  let count = 0; 
+
+  function increment() {
+    count++;
+  }
+
+  function getCount() {
+    return count;
+  }
+
+  return {
+    increment: increment,
+    getCount: getCount
+  };
+}
+
+// Example 
+const counter = privateCounter();
+counter.increment();
+console.log(counter.getCount()); // prints: 1
+
+```
+QUESTION #2
+Write a JavaScript function called generateFibonacci(count) that returns a closure. The closure should generate the next number in the Fibonacci sequence each time it is called. The generateFibonacci function should take a parameter count that determines how many times the closure will generate the next number, and it should use recursion for this purpose.
