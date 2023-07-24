@@ -61,3 +61,23 @@ console.log(counter.getCount()); // prints: 1
 ```
 QUESTION #2
 Write a JavaScript function called generateFibonacci(count) that returns a closure. The closure should generate the next number in the Fibonacci sequence each time it is called. The generateFibonacci function should take a parameter count that determines how many times the closure will generate the next number, and it should use recursion for this purpose.
+```javascript
+const generateFibonacci = (count) => {
+  let currentCount = 0;
+  let previous = 0;
+  let current = 1;
+
+  const fibonacciClosure = () => {
+    if (currentCount < count) {
+      const result = previous;
+      [previous, current] = [current, previous + current];
+      currentCount++;
+      return result;
+    } else {
+      return undefined;
+    }
+  };
+
+  return fibonacciClosure;
+};
+```
