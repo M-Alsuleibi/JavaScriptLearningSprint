@@ -25,7 +25,7 @@ You should apply typescript types to every promise, the input of `convertToObj`,
 and the output of `convertToObj`. 
 
 Build interfaces and types as needed.
-
+Solution:
 ```javascript
 
 const sayHelloWorld = new Promise(resolve, reject => {
