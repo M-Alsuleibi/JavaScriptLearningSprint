@@ -54,6 +54,69 @@ console.log(dillion)
 * Block scope :Blocks are not scopes until they have a `let` or `const` inside of them and then that sort of implicitly makes them a scope.
 * When using `const` you can not reassign! BUT you can mutate like in arrays declared with `const` keyword.It prefered to use it with primitive immutable values like strings, numbers, and booleans. 
 # [Coding Exercises](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week3-day3-tasks/tasks.md)
+#### QUESTION 1 Solution:
+```javascript
+
+const exampleNormalFunc1 = (a, b, c) => {
+  return a * (b + c);
+}
+
+const exampleNormalFunc2 = (x, y) => {
+  return x * y;
+}
+
+const exampleNormalFunc3 = (string) => {
+  return string + " " + string + " " + string + "!";
+}
+
+
+const arrowHOF = (normalFunc) => {
+  // write your code here;
+ return (...args) => {
+    return (n = 1) => {
+      let result = [];
+      for(let i = 0; i < n; i++) {
+        result.push(normalFunc(...args));
+      }
+      return result;
+    }
+  }
+}
+
+const hofNormalFunc1 = arrowHOF(exampleNormalFunc1);
+const hofNormalFunc2 = arrowHOF(exampleNormalFunc2);
+const hofNormalFunc3 = arrowHOF(exampleNormalFunc3);
+
+console.log(hofNormalFunc1(3, 4, 5)(2)); // logs 60 twice
+console.log(hofNormalFunc2(20, 35))(4); // logs 700 four times
+console.log(hofNormalFunc3("Meow")()); // logs "Meow Meow Meow!" once
+
+```
+#### QUESTION 2 Solution:
+```javascript
+
+// Example object
+const obj = {
+  name: 'John',
+  greet: function (greeting) {
+    console.log(`${greeting}, ${this.name}!`);
+  }
+};
+
+const preserveThis = (func) => {
+  // write your code here;
+ return (...args) => {
+    return func.apply(obj, args);
+  };
+}
+
+// Wrap the greet function using preserveThis
+const preservedGreet = preserveThis(obj.greet);
+
+// Call the wrapped function as a method of the object
+preservedGreet('Hello'); // Output: "Hello, John!"
+
+```
 
 #### QUESTION 3 Solution:
 > Explanation: . When `inner1()` is called, it accesses the value of `x` from its outer lexical environment, which is `outer1`. Since `x` is defined within `outer1`, `inner1` can access and log the value of `x`, which is `10`.
